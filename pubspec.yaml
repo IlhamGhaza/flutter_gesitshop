@@ -1,90 +1,48 @@
 name: flutter_gesitshop
 description: "A new Flutter project."
 
-
-publish_to: 'none' 
-
-
-
-
-
-
-
-
-
-
-
-
+publish_to: "none"
 
 version: 1.0.0+1
 
 environment:
   sdk: ^3.5.0
 
-
-
-
-
-
-
 dependencies:
+  cloud_firestore: null
+
+  cupertino_icons: ^1.0.6
+  dartz: ^0.10.1
+  firebase_auth: ^5.1.4
   flutter:
     sdk: flutter
-
-
-  
-  
-  cupertino_icons: ^1.0.8
+  flutter_bloc: ^8.1.6
+  flutter_svg: ^2.0.10+1
+  get_it: ^7.7.0
 
 dev_dependencies:
+  # cloud_firestore: ^5.2.1
+  flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
-
   
-  
-  
-  
-  
-  flutter_lints: ^4.0.0
-
-
-
-
 
 flutter:
-
-  
-  
-  
   uses-material-design: true
 
-  
-  
-  
-  
+  assets:
+    - assets/fonts/
+    - assets/vectors/
+    - assets/images/
 
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  fonts:
+    - family: CircularStd
+      fonts:
+        - asset: assets/fonts/CircularStd-Black.ttf
+          weight: 800
+        - asset: assets/fonts/CircularStd-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/CircularStd-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/CircularStd-Regular.ttf
+          weight: 400

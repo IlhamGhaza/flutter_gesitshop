@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "266849350424",
+    "project_id": "gesitshop-dd1c4",
+    "storage_bucket": "gesitshop-dd1c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266849350424:android:f121daef9b3dcf5048a46d",
+        "android_client_info": {
+          "package_name": "com.IlhamG"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqUOmWfij5sygDR-ifUkUlGO3p8E4GRrE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
