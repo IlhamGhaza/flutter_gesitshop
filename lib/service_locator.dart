@@ -2,6 +2,12 @@ import 'package:get_it/get_it.dart';
 
 import 'data/auth/repository/auth_repository_impl.dart';
 import 'data/auth/source/auth_firebase_service.dart';
+import 'data/category/repository/category.dart';
+import 'data/category/source/category_firebase_service.dart';
+import 'data/order/repository/order.dart';
+import 'data/order/source/order_firebase_service.dart';
+import 'data/product/repository/product.dart';
+import 'data/product/source/product_firebase_service.dart';
 import 'domain/auth/repository/auth.dart';
 import 'domain/auth/usecases/get_ages.dart';
 import 'domain/auth/usecases/get_user.dart';
@@ -9,6 +15,22 @@ import 'domain/auth/usecases/is_logged_in.dart';
 import 'domain/auth/usecases/send_password_reset_email.dart';
 import 'domain/auth/usecases/siginup.dart';
 import 'domain/auth/usecases/signin.dart';
+import 'domain/category/repository/category.dart';
+import 'domain/category/usecases/get_categories.dart';
+import 'domain/order/repository/order.dart';
+import 'domain/order/usecases/add_to_cart.dart';
+import 'domain/order/usecases/get_cart_products.dart';
+import 'domain/order/usecases/get_orders.dart';
+import 'domain/order/usecases/order_registration.dart';
+import 'domain/order/usecases/remove_cart_product.dart';
+import 'domain/product/repository/product.dart';
+import 'domain/product/usecases/add_or_remove_favorite_product.dart';
+import 'domain/product/usecases/get_favorties_products.dart';
+import 'domain/product/usecases/get_new_in.dart';
+import 'domain/product/usecases/get_products_by_category_id.dart';
+import 'domain/product/usecases/get_products_by_title.dart';
+import 'domain/product/usecases/get_top_selling.dart';
+import 'domain/product/usecases/is_favorite.dart';
 
 
 final sl = GetIt.instance;

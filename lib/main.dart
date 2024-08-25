@@ -1,17 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gesitshop/presentation/splash/bloc/splash_cubit.dart';
-import 'package:flutter_gesitshop/presentation/splash/pages/splash.dart';
-import 'package:flutter_gesitshop/service_locator.dart';
+
+import 'core/configs/theme/app_theme.dart';
+import 'data/FirestoreService.dart';
 import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 
+import 'presentation/splash/bloc/splash_cubit.dart';
+import 'presentation/splash/pages/splash.dart';
+import 'service_locator.dart';
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await initializeDependencies();
+  ///fake data
+   //TODO: uncomment this when the app is done
+  // final firestoreService = FirestoreService();
+  // await firestoreService.uploadFakeData();
+
   runApp(const MyApp());
 }
 
@@ -23,14 +30,9 @@ class MyApp extends StatelessWidget {
     return BlocProvider(
       create: (context) => SplashCubit()..appStarted(),
       child: MaterialApp(
-        title: 'Flutter Demo',
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
-        home: const SplashPage(),
-      ),
+          theme: AppTheme.appTheme,
+          debugShowCheckedModeBanner: false,
+          home: const SplashPage()),
     );
   }
 }
